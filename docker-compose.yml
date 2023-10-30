@@ -1,10 +1,10 @@
 version: "3"
 services:
-  app:
+  ctf:
     build: .
     ports:
       - "5000:5000"
-    container_name: app
+    container_name: ctf
     volumes:
-      - ./app:/usr/src/app
+      - ./apps:/usr/src/apps
     command: flask run --host=0.0.0.0

@@ -1,9 +1,9 @@
 FROM python:3.8
 
-WORKDIR /usr/src/app
-ENV FLASK_APP=app
+WORKDIR /usr/src
 
-COPY /app/requirements.txt ./
+COPY /apps/requirements.txt ./
+COPY /apps/.env ./
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
